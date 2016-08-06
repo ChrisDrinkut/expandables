@@ -1,0 +1,43 @@
+<html>
+<head>
+
+<style>
+.toggle {
+  height:48px;
+  width:48px;
+ background:url("http://icons.iconarchive.com/icons/pixelmixer/basic/48/plus-icon.png") no-repeat;
+ display:inline-block;
+ margin-top:20px;
+}
+
+p {display:inline-block;}
+
+.toggle.expanded { background:url("http://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_32.png");
+}
+
+</style>
+
+
+</head>
+<body>
+
+<span>Hello Already</span>
+<span class="toggle"></span>
+<div class="content">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+
+<script>
+
+$(document).ready(function(){
+  var $content = $(".content").hide();
+  $(".toggle").on("click", function(e){
+    $(this).toggleClass("expanded");
+    $content.slideToggle();
+  });
+});
+
+</script>
+
+</body>
+</html>
